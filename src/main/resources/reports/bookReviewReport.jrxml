@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookReviewReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="77e64020-5d83-4c91-a137-82838f866392">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="bookTitle" class="java.lang.String"/>
+	<parameter name="averageMark" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="reviewerName" class="java.lang.String"/>
+	<field name="comment" class="java.lang.String"/>
+	<field name="score" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="140" y="24" width="261" height="30" uuid="cfb79f4e-ab91-4632-9d5e-9d18aab3552c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Book Review Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="78" splitType="Stretch">
+			<textField>
+				<reportElement x="82" y="0" width="377" height="30" uuid="0332c34e-77f9-4a0b-a9e6-8bcf9ae8d485"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="ipaexg" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bookTitle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="40" width="70" height="30" uuid="6f3de980-df86-4642-ac84-b3bd0438f93a"/>
+				<textElement textAlignment="Center">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{averageMark}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="40" width="70" height="30" uuid="a480586f-2b35-4d07-b56e-c1588e4b2c33"/>
+				<textElement textAlignment="Center">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<text><![CDATA[平均評価]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="20" width="100" height="30" uuid="208e0d3c-90c6-4811-b4cd-66e46c86ad47"/>
+				<textElement textAlignment="Left">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reviewerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="60" width="42" height="30" uuid="96be939e-92f4-40b5-b477-e3f03d214892"/>
+				<textElement textAlignment="Right">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{score}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="20" width="390" height="70" uuid="f380797e-8fe9-46c3-9afd-59a69071e9a0"/>
+				<textElement>
+					<font fontName="ipaexg" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{comment}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="60" width="37" height="30" uuid="b675897b-cdfd-48f1-9c14-73b7d8638ce5"/>
+				<textElement textAlignment="Center">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<text><![CDATA[評価]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="60" width="37" height="30" uuid="6755427b-9288-4bde-a5f1-8e121f0e586f"/>
+				<textElement textAlignment="Center">
+					<font fontName="ipaexg"/>
+				</textElement>
+				<text><![CDATA[点]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

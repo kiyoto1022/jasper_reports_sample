@@ -2,9 +2,6 @@ package com.example.demo.domain.model.review.comment;
 
 import java.util.List;
 
-/**
- * Created by akiyamakiyoto on 2018/01/17.
- */
 public class ReviewComments {
 
     List<ReviewComment> value;
